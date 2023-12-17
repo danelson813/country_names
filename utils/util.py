@@ -1,6 +1,9 @@
 import requests
 from bs4 import BeautifulSoup as bs
 
+def get_url(i: int) -> str:
+    url = f"https://www.scrapethissite.com/pages/forms/?page_num={i}&per_page=50" 
+    return url
 
 def get_soup(url):
     page = requests.get(url)
